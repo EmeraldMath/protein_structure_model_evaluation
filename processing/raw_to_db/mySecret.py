@@ -1,6 +1,0 @@
-db_host = 'ec2-3-228-143-213.compute-1.amazonaws.com'
-db = 'structure_evaluation'
-db_user = 'postgres'
-db_password = 'PPNN13mod'
-AWS_ACCESS_KEY = 'AKIAT4GRMSYTBE6IWK57'
-AWS_SECRET_KEY = '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'
