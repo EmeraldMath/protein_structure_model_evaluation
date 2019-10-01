@@ -21,10 +21,12 @@ def get_a_fold_keys(bucket_name, dir):
     keys = []
     response = client.list_objects(Bucket=bucket_name, Prefix=dir)
     for content in response.get('Contents', []):
+        '''
         i = content.get('Key').split('/')
         if (i[1] != "casp_native_structures"):
             if (len(i) != 5):
                 continue
+        '''
         keys.append((bucket_name, content.get('Key')))
     return keys
 
@@ -75,12 +77,15 @@ def str_to_record(x):
         print(obj)
         print("print protein ", protein)
     '''
+    '''
     img = Image.fromarray(np.array(protein)*10)
     img = img.convert("L")
     with BytesIO() as output:
         img.save(output, "png")
         protein = output.getvalue()
+    '''
     protein = bytearray(np.array(protein))
+
     obj = obj.strip().split('/')
     str_id = struct_id(obj)
     protein_record = Row(str_id, obj[-2], protein, obj[-3])
@@ -100,14 +105,15 @@ def native_to_record(x):
     pro_contains_resArry = output.decode()
     row = pro_contains_resArry[:-1].splitlines()
     protein = [[float(j) for j in i.split()] for i in pro_contains_resArry[:-1].splitlines()]
-     
+    '''
     img = Image.fromarray(np.array(protein)*10)
     img = img.convert("L")
     with BytesIO() as output:
         img.save(output, "png")
         protein = output.getvalue()
-    
+    '''
     protein = bytearray(np.array(protein))
+
     obj = obj.strip().split('/')
     protein_record = Row(obj[-1], protein, obj[-2], 100.0)
     
@@ -144,8 +150,8 @@ def set_dir():
 
 def main():
     bucket_name = 'protein-structures'
-    #struct_dir, score_dir = set_test_dir()
-    struct_dir, score_dir = set_dir()
+    struct_dir, score_dir = set_test_dir()
+    #struct_dir, score_dir = set_dir()
     
     schema1 = StructType([
         StructField("candidate_id", StringType(), False),
@@ -176,43 +182,45 @@ def main():
     '''
     extract and computing contact_map distributedly
     '''
-    #structs = get_a_fold_keys(bucket_name, struct_dir)
-    struct_dir = 'protein_raw_data/casp_protein_structures/casp8/'
-    structs = get_all_s3_keys(bucket_name, struct_dir)
+    print(bucket_name)
+    print(struct_dir)
+    structs = get_a_fold_keys(bucket_name, struct_dir)
+    #struct_dir = 'protein_raw_data/casp_protein_structures/casp8/'
+    #structs = get_all_s3_keys(bucket_name, struct_dir)
     print(len(structs))
 
-    '''
+    
     rdd = sc.parallelize(structs)
     row_rdd = rdd.map(str_to_record)
     df_str = spark_session.createDataFrame(row_rdd, schema1)
-    df_str.write.jdbc(url='jdbc:%s' % url, table='structures', mode='append',  properties=properties)
+    #df_str.write.jdbc(url='jdbc:%s' % url, table='structures', mode='overwrite',  properties=properties)
     #df_str.show()
-    '''
+    
 
     '''
     extract scores distributedly
     '''
 
-    '''
+    
     scores = get_a_fold_keys(bucket_name, score_dir)
     rdd = sc.parallelize(scores)
     row_rdd = rdd.map(score_to_record)
     df_score = spark_session.createDataFrame(row_rdd, schema2)
-    df_score.write.jdbc(url='jdbc:%s' % url, table='scores', mode='append',  properties=properties)
-    '''   
+    #df_score.write.jdbc(url='jdbc:%s' % url, table='scores', mode='overwrite',  properties=properties)
+      
     '''
     inner join two df to make sure the traning data is good. But still keep the raw data
     as df_str and df_score
     '''
-    '''
+    
     df_join = df_str.join(df_score, df_str.candidate_id == df_score.score_id)
     df_join.createOrReplaceTempView("table1")
     df = spark_session.sql("SELECT candidate_id, protein_id, contact_map, candidate_source, score from table1")
-    df.write.jdbc(url='jdbc:%s' % url, table='candidates', mode='append',  properties=properties)
+    df.write.jdbc(url='jdbc:%s' % url, table='test_candidates', mode='overwrite',  properties=properties)
     df_str.show()
     df_score.show()
     df.show()
-
+    '''
     native_dir = "protein_raw_data/casp_native_structures/casp10"
     native = get_a_fold_keys(bucket_name, native_dir)
     rdd = sc.parallelize(native)

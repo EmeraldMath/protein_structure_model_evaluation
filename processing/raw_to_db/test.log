@@ -1,0 +1,92 @@
+2019-10-01 15:30:15 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-10-01 15:30:16 INFO  SparkContext:54 - Running Spark version 2.4.0
+2019-10-01 15:30:16 INFO  SparkContext:54 - Submitted application: s3ToLIC
+2019-10-01 15:30:17 INFO  SecurityManager:54 - Changing view acls to: ubuntu
+2019-10-01 15:30:17 INFO  SecurityManager:54 - Changing modify acls to: ubuntu
+2019-10-01 15:30:17 INFO  SecurityManager:54 - Changing view acls groups to: 
+2019-10-01 15:30:17 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2019-10-01 15:30:17 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ubuntu); groups with view permissions: Set(); users  with modify permissions: Set(ubuntu); groups with modify permissions: Set()
+2019-10-01 15:30:17 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 39588.
+2019-10-01 15:30:17 INFO  SparkEnv:54 - Registering MapOutputTracker
+2019-10-01 15:30:17 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2019-10-01 15:30:17 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-10-01 15:30:17 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2019-10-01 15:30:17 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-e0e8e75b-8e95-456b-89c1-37a2fe67cff4
+2019-10-01 15:30:17 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2019-10-01 15:30:17 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2019-10-01 15:30:17 INFO  log:192 - Logging initialized @4909ms
+2019-10-01 15:30:17 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-10-01 15:30:17 INFO  Server:419 - Started @5074ms
+2019-10-01 15:30:17 WARN  Utils:66 - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+2019-10-01 15:30:17 INFO  AbstractConnector:278 - Started ServerConnector@12627a3d{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+2019-10-01 15:30:17 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4041.
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@20a16c77{/jobs,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@297a9636{/jobs/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7750fe1a{/jobs/job,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3a671182{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4751ebde{/stages,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@37816d00{/stages/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2bf5f57e{/stages/stage,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5d8e8333{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@59d4c3f9{/stages/pool,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@10d50252{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@296c338e{/storage,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@52ba8b{/storage/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7fe66a73{/storage/rdd,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4799204f{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@f219b71{/environment,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1ab2fefc{/environment/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@56cbba2b{/executors,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@58de63e5{/executors/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5b27819c{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@56efd11a{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5d7e330e{/static,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@ac4aa1a{/,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@270290b4{/api,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@54c2a42e{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3218a6bd{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-10-01 15:30:18 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://ec2-3-228-249-83.compute-1.amazonaws.com:4041
+2019-10-01 15:30:18 INFO  SparkContext:54 - Added JAR file:///home/ubuntu/protein_structure_model_evaluation/processing/raw_to_db/postgresql-42.2.8.jar at spark://ip-10-0-0-12.ec2.internal:39588/jars/postgresql-42.2.8.jar with timestamp 1569943818156
+2019-10-01 15:30:18 INFO  SparkContext:54 - Added file file:///home/ubuntu/protein_structure_model_evaluation/processing/raw_to_db/LIC at spark://ip-10-0-0-12.ec2.internal:39588/files/LIC with timestamp 1569943818215
+2019-10-01 15:30:18 INFO  Utils:54 - Copying /home/ubuntu/protein_structure_model_evaluation/processing/raw_to_db/LIC to /tmp/spark-dd6053e5-999b-408f-ad52-0a0180343e44/userFiles-9795b8e8-cdb1-4595-9f1e-530028039ae1/LIC
+2019-10-01 15:30:18 INFO  StandaloneAppClient$ClientEndpoint:54 - Connecting to master spark://ip-10-0-0-12:7077...
+2019-10-01 15:30:18 INFO  TransportClientFactory:267 - Successfully created connection to ip-10-0-0-12/10.0.0.12:7077 after 43 ms (0 ms spent in bootstraps)
+2019-10-01 15:30:18 INFO  StandaloneSchedulerBackend:54 - Connected to Spark cluster with app ID app-20191001153018-0071
+2019-10-01 15:30:18 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35207.
+2019-10-01 15:30:18 INFO  NettyBlockTransferService:54 - Server created on ip-10-0-0-12.ec2.internal:35207
+2019-10-01 15:30:18 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-10-01 15:30:18 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 35207, None)
+2019-10-01 15:30:18 INFO  BlockManagerMasterEndpoint:54 - Registering block manager ip-10-0-0-12.ec2.internal:35207 with 366.3 MB RAM, BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 35207, None)
+2019-10-01 15:30:18 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 35207, None)
+2019-10-01 15:30:18 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, ip-10-0-0-12.ec2.internal, 35207, None)
+2019-10-01 15:30:19 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6572ca87{/metrics/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:19 INFO  StandaloneSchedulerBackend:54 - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+2019-10-01 15:30:19 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/ubuntu/protein_structure_model_evaluation/processing/raw_to_db/spark-warehouse/').
+2019-10-01 15:30:19 INFO  SharedState:54 - Warehouse path is 'file:/home/ubuntu/protein_structure_model_evaluation/processing/raw_to_db/spark-warehouse/'.
+2019-10-01 15:30:19 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2ed72a39{/SQL,null,AVAILABLE,@Spark}
+2019-10-01 15:30:19 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@49eafc48{/SQL/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:19 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@571fe19f{/SQL/execution,null,AVAILABLE,@Spark}
+2019-10-01 15:30:19 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@50787803{/SQL/execution/json,null,AVAILABLE,@Spark}
+2019-10-01 15:30:19 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1286a180{/static/sql,null,AVAILABLE,@Spark}
+2019-10-01 15:30:20 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
+2019-10-01 17:00:21 INFO  StandaloneAppClient$ClientEndpoint:54 - Master removed worker worker-20190929142558-10.0.0.5-46866: Not receiving heartbeat for 60 seconds
+2019-10-01 17:00:21 INFO  StandaloneSchedulerBackend:54 - Worker worker-20190929142558-10.0.0.5-46866 removed: Not receiving heartbeat for 60 seconds
+2019-10-01 17:00:21 INFO  TaskSchedulerImpl:54 - Handle removed worker worker-20190929142558-10.0.0.5-46866: Not receiving heartbeat for 60 seconds
+2019-10-01 17:00:21 INFO  DAGScheduler:54 - Shuffle files lost for worker worker-20190929142558-10.0.0.5-46866 on host 10.0.0.5
+2019-10-01 17:00:22 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191001153018-0071/0 on worker-20190929142835-10.0.0.10-39613 (10.0.0.10:39613) with 6 core(s)
+2019-10-01 17:00:22 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191001153018-0071/0 on hostPort 10.0.0.10:39613 with 6 core(s), 1024.0 MB RAM
+2019-10-01 17:00:22 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191001153018-0071/1 on worker-20190929142558-10.0.0.5-46866 (10.0.0.5:46866) with 6 core(s)
+2019-10-01 17:00:22 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191001153018-0071/1 on hostPort 10.0.0.5:46866 with 6 core(s), 1024.0 MB RAM
+2019-10-01 17:00:22 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191001153018-0071/2 on worker-20190929142833-10.0.0.11-44727 (10.0.0.11:44727) with 6 core(s)
+2019-10-01 17:00:22 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191001153018-0071/2 on hostPort 10.0.0.11:44727 with 6 core(s), 1024.0 MB RAM
+2019-10-01 17:00:22 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191001153018-0071/1 is now RUNNING
+2019-10-01 17:00:22 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191001153018-0071/0 is now RUNNING
+2019-10-01 17:00:22 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191001153018-0071/2 is now RUNNING
+2019-10-01 17:00:24 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.10:55802) with ID 0
+2019-10-01 17:00:24 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.5:57234) with ID 1
+2019-10-01 17:00:24 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.11:36100) with ID 2
+2019-10-01 17:00:24 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.0.0.10:43584 with 366.3 MB RAM, BlockManagerId(0, 10.0.0.10, 43584, None)
+2019-10-01 17:00:24 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.0.0.5:40423 with 366.3 MB RAM, BlockManagerId(1, 10.0.0.5, 40423, None)
+2019-10-01 17:00:24 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.0.0.11:36200 with 366.3 MB RAM, BlockManagerId(2, 10.0.0.11, 36200, None)
+2019-10-01 19:08:41 WARN  HeartbeatReceiver:66 - Removing executor 2 with no recent heartbeats: 153988 ms exceeds timeout 120000 ms
+2019-10-01 19:18:27 ERROR TaskSchedulerImpl:70 - Lost executor 2 on 10.0.0.11: Executor heartbeat timed out after 153988 ms
