@@ -21,6 +21,7 @@ protein_structure_model_evaluation
 |  |_etl
 |     |_etlprotein.py
 |     |_run.sh
+|     |_candidate.sql
 |_DS
 |  |_imageTransfer
 |  |  |_bi2pic.py
@@ -32,6 +33,8 @@ protein_structure_model_evaluation
 |     |_train_model.py
 |     |_test_model.py
 |     |_run.sh
+|     |_prediction.sql
+|
 |_front_end
    |_app.py
 ```
