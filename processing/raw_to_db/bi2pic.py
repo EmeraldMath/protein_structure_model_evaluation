@@ -84,7 +84,7 @@ def uploadImage(row):
 def main():   
     url ='postgresql://10.0.0.8:5432/structure_evaluation'
     properties = {'user':db_user,'password':db_password,'driver':'org.postgresql.Driver'}
-    spark_session =SparkSession.builder.master("spark://ip-10-0-0-12:7077").appName("outputImage").getOrCreate()
+    spark_session = SparkSession.builder.getOrCreate()
     sc = spark_session.sparkContext
     sc._jsc.hadoopConfiguration().set("fs.s3a.access.key", AWS_ACCESS_KEY)
     sc._jsc.hadoopConfiguration().set("fs.s3a.secret.key", AWS_SECRET_KEY)
@@ -94,11 +94,16 @@ def main():
         StructField("protein_id", StringType(), False),
         StructField("contact_map", BinaryType(), False),
         StructField("candidate_source", StringType(), False),
-        StructField("score", FloatType(), False)
+        StructField("score", FloatType(), False),
+        StructField("str_time", TimestampType(), False),
+        StructField("score_time", TimestampType(), False),
+        StructField("join_time", TimestampType(), False),
     ])
-
-    df = spark_session.read.jdbc('jdbc:%s' % url, table = 'test_candidates', properties = properties)
-
+    '''
+    for traning set, table = 'casp8', for test set, table = 'casp*'
+    '''
+    df = spark_session.read.jdbc('jdbc:%s' % url, table = 'casp8', properties = properties)
+    
     df.foreach(uploadImage)
 
 

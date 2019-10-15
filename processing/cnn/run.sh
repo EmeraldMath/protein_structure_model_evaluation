@@ -1,0 +1,2 @@
+#!/bin/sh
+spark-submit  --master spark://ip-10-0-0-12:7077 --name "cnn" --jars postgresql-42.2.8.jar  --driver-memory 30g --executor-memory 30g --packages databricks:spark-deep-learning:1.5.0-spark2.4-s_2.11  --conf spark.network.timeout=10000000   cnn.py
