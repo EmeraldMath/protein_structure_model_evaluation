@@ -22,6 +22,7 @@ protein_structure_model_evaluation
 |     |_etlprotein.py
 |     |_run.sh
 |     |_candidate.sql
+|     |_LIC
 |_DS
 |  |_imageTransfer
 |  |  |_bi2pic.py
@@ -44,6 +45,7 @@ protein_structure_model_evaluation
 - plots.py: plot the scores' count distruction for CASP8 structures, in order to divide structures into buckets according to their scores
 - train_model.py: train the CASP8 data
 - test_model.py: test simulated structures for several target proteins in CASP13
+- LIC: a binary file which is used for extracting features, i.e. computing the weighted contact maps
 
 # Data Pipeline
 
