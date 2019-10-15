@@ -1,7 +1,0 @@
-2019-10-14 11:13:50 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-  File "/home/ubuntu/protein_structure_model_evaluation/processing/imageTransfer/bi2pic.py", line 158
-    query = "select * from candidates candidate_id like {}".format(name)
-          ^
-SyntaxError: invalid syntax
-2019-10-14 11:13:50 INFO  ShutdownHookManager:54 - Shutdown hook called
-2019-10-14 11:13:50 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-89eae7f3-b96d-4b37-a5cb-19d06641c19d

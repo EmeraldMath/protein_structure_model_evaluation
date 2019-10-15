@@ -1,2 +1,0 @@
-#!/bin/sh
-spark-submit  --master spark://ip-10-0-0-12:7077 --name "imageTransfer" --jars postgresql-42.2.8.jar  --driver-memory 30g --executor-memory 30g --conf spark.network.timeout=10000000 bi2pic.py
