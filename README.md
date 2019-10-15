@@ -16,7 +16,7 @@ The simulated structures in the database is from CASP8—CASP13. Training set fo
 # Directory structures
 
 ```shell
-protein_structure_model_evaluation
+src
 |_DE
 |  |_etl
 |     |_etlprotein.py
@@ -38,6 +38,11 @@ protein_structure_model_evaluation
 |
 |_front_end
    |_app.py
+   |_assets
+      |_custom-script.js
+      |_gitphy.gif
+      |_header.css
+      |_typography.css
 ```
 
 - etlprotein.py: extract the CASP8--13 data of structures and scores from S#, transfer the structure information into contact map(structure features), load the matched structure IDs, structure features and scores into PostgreSQL
