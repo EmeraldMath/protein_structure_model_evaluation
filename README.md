@@ -1,4 +1,4 @@
-#Purpose
+# Purpose
 
 A good method for evaluating simulated protein structures is important considering the following two facts.
 
@@ -13,7 +13,7 @@ In the second section, I explored a possible machine-learning-based evaluation m
 
 The simulated structures in the database is from CASP8—CASP13. Training set for the second section is from CASP8 and simulated structures for several target proteins from CASP13 works as test data. (Critical Assessment of protein Structure Prediction, or CASP, is a community-wide, worldwide experiment for protein structure prediction taking place every two years since 1994. CASP provides research groups with an opportunity to objectively test their structure prediction methods and delivers an independent assessment of the state of the art in protein structure modeling to the research community and software users. — From Wikipedia) 
 
-#Directory structures
+# Directory structures
 
 ```shell
 protein_structure_model_evaluation
@@ -42,10 +42,10 @@ protein_structure_model_evaluation
 - train_model.py: train the CASP8 data
 - test_model.py: test simulated structures for several target proteins in CASP13
 
-#Data pipeline
+# Data Pipeline
 
-![Screen Shot 2019-10-15 at 9.39.53 AM](./pipeline.png)
+![Screen Shot 2019-10-15 at 9.39.53 AM](./pipeline.png) 
 
-#Demo web
+# Demo
 
 http://www.datapartner.me
