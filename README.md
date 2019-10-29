@@ -45,7 +45,7 @@ src
       |_typography.css
 ```
 
-- etlprotein.py: extract the CASP8--13 data of structures and scores from S#, transfer the structure information into contact map(structure features), load the matched structure IDs, structure features and scores into PostgreSQL
+- etlprotein.py: extract the CASP8--13 data of structures and scores from S3, transfer the structure information into contact map(structure features), load the matched structure IDs, structure features and scores into PostgreSQL
 - bi2pic.py: transfer the contact maps(matrices) into images and upload the images into S3
 - plots.py: plot the scores' count distruction for CASP8 structures, in order to divide structures into buckets according to their scores
 - train_model.py: train the CASP8 data
